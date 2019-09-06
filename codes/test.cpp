@@ -3,11 +3,14 @@
 //
 
 #include <iostream>
-
+#include <cstdio>
+#include <cstring>
 using namespace std;
 
+char str[105];
 
 int main(){
-    cout<<"asdfasdf"<<endl;
+    gets(str);
+    cout<<str<<endl;
     return 0;
 }
