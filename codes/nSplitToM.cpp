@@ -1,7 +1,3 @@
-//
-// Created by 15361 on 2019/9/8.
-//
-
 #include <iostream>
 #include <string>
 #include <cstdio>
@@ -9,6 +5,11 @@
 using namespace std;
 const int maxn = 205;
 int dp[maxn][2][maxn],dp1[maxn][2][maxn];
+
+
+/*
+一个数n分成m方案数
+*/
 
 int main(){
 #ifndef ONLINE_JUDGE
