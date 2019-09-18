@@ -2,10 +2,6 @@
 // Created by 15361 on 2019/9/8.
 //
 
-//
-// Created by 15361 on 2019/9/5.
-//
-
 #include <iostream>
 #include <cstdio>
 #include <cstring>

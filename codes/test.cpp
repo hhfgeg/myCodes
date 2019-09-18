@@ -1,7 +1,3 @@
-//
-// Created by 15361 on 2019/9/8.
-//
-
 #include <iostream>
 #include <string>
 #include <cstdio>
@@ -10,39 +6,29 @@ using namespace std;
 const int maxn = 205;
 int dp[maxn][2][maxn],dp1[maxn][2][maxn];
 
+
 int main(){
 #ifndef ONLINE_JUDGE
     freopen("in.txt","r",stdin);
     freopen("out.txt","w",stdout);
 #endif // ONLINE_JUDGE
 
-    int n,m;
-    scanf("%d,%d",&n,&m);
-    for(int i = 1;i<=n;i++){
-        dp[i][1][i] = 1;
+    int n;
+    cin>>n;
+    if(n == 1){
+        printf("%.6lf\n",1.0);
+    }else if(n < 2){
+        printf("%.6lf\n",1.0);
+    }else if(n < 6){
+        printf("%.6lf\n",1.0/2);
+    }else if(n < 30){
+        printf("%.6lf\n",1.0/3);
+    }else if(n < 210){
+        printf("%.6lf\n",4.0/15);
+    }else if(n < 2310){
+        printf("%.6lf\n",8.0/35);
     }
-
-    for(int i = 1;i<=n;i++){
-        for(int j =i;j<=n;j++){
-            dp1[i][1][j] = 1;
-        }
-    }
-
-    for(int i = 1;i<=n;i++){
-        for(int j = 2;j<=m;j++){
-            for(int k = 1;k<=n;k++){
-                if(k<=i)dp[i][j%2][k] = dp1[i-k][(j-1)%2][k];
-                dp1[i][j%2][k] = dp[i][j%2][k] + dp1[i][j%2][k-1];
-            }
-        }
-    }
-
-    int ans = 0;
-    for(int i = 1;i<=n;i++){
-        ans += dp[n][m%2][i];
-    }
-    cout<<ans<<endl;
-
+    else printf("%.6lf\n",16.0/77);
 
     return 0;
 }
